@@ -1,8 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPod 檔案下載站</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background: #f4f4f4; }
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007AFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 10px;
+        }
+        .note { color: #666; font-size: 12px; margin-top: 20px; }
+    </style>
+</head>
 <body>
-    <h1>Hello World!</h1>
-    <p>Welcome to my iPod download station.</p>
-    <a href="https://files.catbox.moe/fy99x9.mp4">Download Video</a>
+
+    <h2>檔案下載清單</h2>
+    
+    <!-- 方案 A: 直接連結 (若 iOS 9 支援會跳轉播放) -->
+    <a href="https://files.catbox.moe/fy99x9.mp4" class="download-btn" download>
+        直接下載影片 (MP4)
+    </a>
+
+    <br>
+
+    <!-- 方案 B: 使用 Google Drive 的強制下載連結 (較大機會觸發下載) -->
+    <!-- 格式為 https://drive.google.com/uc?export=download&id=檔案ID -->
+    
+    <div class="note">
+        提示：若點擊後直接播放，請長按畫面選擇「儲存影片」；<br>
+        或在電腦下載後透過 iTunes 同步。
+    </div>
+
+    <br>
+    <a href="https://files.catbox.moe/fy99x9.mp4" download="my_video.mp4">點擊下載影片</a>
+    
+
 </body>
 </html>
